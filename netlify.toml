@@ -1,0 +1,7 @@
+# Optional: connect repo at https://app.netlify.com — build runs at site root (no /repo/ base).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
