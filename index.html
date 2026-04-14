@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chaejun Park — student at Yonsei University, South Korea." />
+    <title>Chaejun Park</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- Background video: Mixkit "Abstract light shapes on a black background" (mixkit.co, free license) -->
+    <div class="video-bg" aria-hidden="true">
+      <video
+        class="video-bg__media"
+        src="/bg-hero.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+      <div class="video-bg__scrim"></div>
+    </div>
+
+    <div class="site-shell">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#" class="logo" data-scroll="hero">Chaejun Park</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#about" data-scroll="about">About</a></li>
+            <li><a href="#work" data-scroll="work">Work</a></li>
+            <li><a href="#contact" data-scroll="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="hero" class="section hero">
+        <div class="container hero-inner">
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo"
+              src="/park.jpg"
+              alt="Chaejun Park"
+              width="320"
+              height="320"
+              decoding="async"
+            />
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow">Hello, I’m (probably)</p>
+            <h1 class="hero-title">Chaejun Park</h1>
+            <p class="hero-meta">Yonsei University · South Korea</p>
+            <p class="hero-lead">
+              Student at Yonsei University in South Korea. I like clear design, solid code, and UIs
+              that don’t make people say “wait, what?” I also like coffee—mostly for debugging morale.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#work" data-scroll="work">View work</a>
+              <a class="btn btn-ghost" href="#contact" data-scroll="contact">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container narrow">
+          <h2 class="section-title">About</h2>
+          <p class="section-lead">
+            I’m Chaejun Park—South Korea, Yonsei University, and a healthy respect for the phrase
+            “it works on my machine.” I build interfaces that behave and code that future-me won’t
+            file a complaint about.
+          </p>
+          <ul class="pill-list" aria-label="Skills">
+            <li>Yonsei University</li>
+            <li>South Korea</li>
+            <li>HTML &amp; CSS</li>
+            <li>JavaScript</li>
+            <li>Professional tab hoarder</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="work" class="section work">
+        <div class="container">
+          <h2 class="section-title">Selected work</h2>
+          <p class="section-intro">
+            Real projects, fake deadlines. Click through for the serious version—plus one dad joke
+            per page, budget permitting.
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <h3 class="card-title">Project One</h3>
+              <p class="card-desc">
+                Turns chaos into checkboxes. If spreadsheets had feelings, this would be their spa day.
+              </p>
+              <a class="card-link" href="./project.html?id=one">View project</a>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Project Two</h3>
+              <p class="card-desc">
+                Filters, sorts, and zero judgment when you sort by “I don’t know what I’m looking for.”
+              </p>
+              <a class="card-link" href="./project.html?id=two">View project</a>
+            </article>
+            <article class="card">
+              <h3 class="card-title">Project Three</h3>
+              <p class="card-desc">
+                Terminal vibes, button clicks. For people who like the command line but also like sunlight.
+              </p>
+              <a class="card-link" href="./project.html?id=three">View project</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container narrow">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-lead">
+            Want to collaborate, debate tabs vs. spaces, or send a meme that violates zero RFCs?
+            Reach out—update the placeholders below so I can actually reply.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:you@example.com">you@example.com</a>
+            </li>
+            <li>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">
+          &copy; <span id="year"></span> Chaejun Park. Built with HTML, CSS &amp; JS—Vite only
+          peer-pressured the dev server. No divs were named <code>wrapper-wrapper-final</code>.
+        </p>
+      </div>
+    </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
