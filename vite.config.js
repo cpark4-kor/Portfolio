@@ -4,17 +4,12 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-/** GitHub Pages project sites live under /repo-name/; user site repo is <user>.github.io at /. Set in CI via GITHUB_PAGES_BASE. */
-const pagesBase = process.env.GITHUB_PAGES_BASE;
-const base =
-  pagesBase && pagesBase !== ""
-    ? pagesBase.endsWith("/")
-      ? pagesBase
-      : `${pagesBase}/`
-    : "/";
-
+/**
+ * Relative base so built CSS/JS/assets resolve under GitHub Pages project URLs
+ * (e.g. /Portfolio/) without CI needing the exact repo name or casing.
+ */
 export default defineConfig({
-  base,
+  base: "./",
   root: ".",
   build: {
     outDir: "dist",

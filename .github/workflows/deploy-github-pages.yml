@@ -32,23 +32,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Set base path for GitHub Pages
-        id: base
-        shell: bash
-        run: |
-          OWNER="${{ github.repository_owner }}"
-          REPO="${{ github.event.repository.name }}"
-          if [ "$REPO" = "$OWNER.github.io" ]; then
-            echo "path=/" >> "$GITHUB_OUTPUT"
-            echo "Using root base (user/organization site repo)."
-          else
-            echo "path=/$REPO/" >> "$GITHUB_OUTPUT"
-            echo "Using project site base: /$REPO/"
-          fi
-
       - name: Build
-        env:
-          GITHUB_PAGES_BASE: ${{ steps.base.outputs.path }}
         run: npm run build
 
       - name: Upload Pages artifact
